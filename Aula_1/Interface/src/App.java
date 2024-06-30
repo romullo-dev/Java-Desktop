@@ -22,13 +22,6 @@ public class App {
         legenda_2.setText("bbbbbbbbbbbbbbb");
         form.add(legenda_2);
 
-        
-
-
-        
-        
-
-
         form.setVisible(true);
 
 
