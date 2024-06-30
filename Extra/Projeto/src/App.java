@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Jframe Form = 
+        JFrame Form = new JFrame ();
+        Form.
     }
 }
