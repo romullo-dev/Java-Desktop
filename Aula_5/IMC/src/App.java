@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class App extends JFrame {
@@ -21,7 +22,7 @@ public class App extends JFrame {
         App window = new App();
         
         window.setVisible(true);
-        window.setTitle("MMC");
+        window.setTitle("Calc");
         window.setLayout(new FlowLayout());
 
         JPanel panel = new JPanel();
@@ -43,7 +44,12 @@ public class App extends JFrame {
 
     //AÇÃO DO BOTÃO 
 
-    B.addActionListener(App::ButtonSomar);
+    B.addActionListener( new ActionListener () {
+        public void actionPerformed (ActionEvent e) {
+            ButtonSomar(e);  
+        }
+    }
+    );
 
     } //FIM DO MAIN
 
