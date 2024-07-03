@@ -2,73 +2,69 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
 public class App extends JFrame{
-    //CRIANDO COMPONETES DO FORM
-    static JLabel lbl1 = new JLabel ("Sushi hoje?");
-    static JTextField txt1 = new JTextField (40);
-    static JButton btnok = new JButton ("SIM"); 
-    static JButton BtnNao = new JButton ("NAO");
-    static JButton Btnok = new JButton ("OK");
+    //criando os componentes do form
+     static JLabel lbl1 = new JLabel("Digite aqui:");
+     static JTextField txt1 = new JTextField(40);
+ 
+   
+     static JButton btnola = new JButton("olá");
+     static JButton btnmult = new JButton("Multiplicar");
+     static JButton btnsomar = new JButton("Somar");
+    //
+ 
+public static void main (String[] args ) {
+ App Window = new App();
+ Window.setSize(500,500);
+ Window.setVisible(true);
+ Window.setTitle("Minha Tela");
+ Window.setLayout(new FlowLayout());
+ //adicionando os componentes ao formulario window
+ Window.getContentPane().add(lbl1);
+ Window.getContentPane().add(txt1);
 
-    public static void main(String[] args) throws Exception {
-        
-    App Window = new App();
-    Window.setSize(500,500);
-    Window.setVisible(true);
-    Window.setTitle("MINHA TELA");
-    Window.setLayout(new FlowLayout());
-
-    //ADICIOANR OS COMPONETES AO FORMULARIO WINDOW 
-
-    Window.getContentPane().add(lbl1);
-    Window.getContentPane().add(txt1);
-
-    Window.getContentPane().add(btnok);
-    Window.getContentPane().add(BtnNao);
-    Window.getContentPane().add(Btnok);
-    Window.pack();
-
-    //  AÇAO DO BOTÃO
-    btnok.addActionListener(new ActionListener (){
-        public void actionPerformed (ActionEvent e) {
-            ButttonClick(e);   
-        }
-    });
-
-    //  AÇAO DO BOTÃO 2
-    BtnNao.addActionListener(new ActionListener (){
-        public void actionPerformed (ActionEvent e) {
-            ButttonClickNao(e);   
-        }
-    });
-
-    Btnok.addActionListener(new ActionListener (){
-        public void actionPerformed (ActionEvent e) {
-            ButttonClickok(e);   
-        }
-    });
-
-    } //  FIM DO MAIN
-
-    public static void ButttonClick(ActionEvent e) {
-        float r = 0;
-        r = Float.parseFloat(txt1.getText());
-
-        r *= 2;
-
-        
-        JOptionPane.showConfirmDialog(null, r , " SIM " , JOptionPane.ERROR_MESSAGE );
-
+ Window.getContentPane().add(btnola);
+ Window.getContentPane().add(btnmult);
+ Window.getContentPane().add(btnsomar);
+ Window.pack();
+ //ação do botao
+  btnola.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e){
+        butttonClickola(e);
     }
-
-    public static void ButttonClickNao(ActionEvent e) {
-        JOptionPane.showConfirmDialog(null, " Uma pena!! 😒", "NAO" , JOptionPane.ERROR_MESSAGE );
+ });
+ //ação do botao SIM
+ btnmult.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e){
+        butttonClickmult(e);
     }
-
-    public static void ButttonClickok(ActionEvent e) {
-        String n = "";
-        n = txt1.getText();
-        JOptionPane.showConfirmDialog(null,n + " Uma pena!! 😒", "NAO" , JOptionPane.ERROR_MESSAGE );
+ });
+ //ação do botao Não
+ btnsomar.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e){
+        butttonClicksomar(e);
     }
-} //  FIM DO PROGRAMA
+ });
+
+}//fim do main
+
+//Evento clique do botão
+public static void butttonClickola(ActionEvent e) {
+    String n = "";
+    n = txt1.getText();
+   
+    JOptionPane.showMessageDialog(null," Olá " + n, "Tela", JOptionPane.INFORMATION_MESSAGE);
+}//Fim do evento clique
+public static void butttonClickmult(ActionEvent e) {
+    float r = 0;
+    r = Float.parseFloat(txt1.getText());
+    r = r * 2;  
+    JOptionPane.showMessageDialog(null, "O resultado é " + r, "Tela", JOptionPane.INFORMATION_MESSAGE);
+}//Fim do evento clique
+public static void butttonClicksomar(ActionEvent e) {
+    float r = 0;
+    r = Float.parseFloat(txt1.getText());
+    r = r + 2;  
+    JOptionPane.showMessageDialog(null, "O resultado é " + r, "Tela", JOptionPane.INFORMATION_MESSAGE);
+}//Fim do evento clique
+}//Fim do programa
