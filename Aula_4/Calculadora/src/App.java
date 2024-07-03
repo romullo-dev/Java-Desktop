@@ -88,7 +88,7 @@ public class App extends JFrame {
 
     //MULT
 
-    public static void ButtonMult (ActionEvent e) {
+    public static void ButtonMult (ActionEvent e) { 
         float R = 0;
         float N1 = Float.parseFloat(txtnumero1.getText());
         float N2 = Float.parseFloat(txtnumero2.getText());
