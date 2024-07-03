@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class App extends JFrame {
@@ -44,24 +43,19 @@ public class App extends JFrame {
 
     //AÇÃO DO BOTÃO 
 
-    B.addActionListener( new ActionListener () {
-        public void actionPerformed (ActionEvent e) {
-            ButtonSomar(e);  
-        }
-    }
-    );
+    B.addActionListener(App::ButtonSomar);
 
     } //FIM DO MAIN
 
-    //SOMAR 
+    //CALCULO  
     public static void ButtonSomar(ActionEvent e) {
-
         float H1 = Float.parseFloat(H.getText());
         float P1 = Float.parseFloat(P.getText());
         float R =   P1/ (H1 * H1);
         Se(R);
-
     }
+
+    /*COMANDO DE CONDIÇAO*/
     public static void Se (float R) {
         if (R <= 18.5 ) {
             JOptionPane.showMessageDialog(null, "Magreza : " + R , "RESULTADO" , JOptionPane.INFORMATION_MESSAGE);
