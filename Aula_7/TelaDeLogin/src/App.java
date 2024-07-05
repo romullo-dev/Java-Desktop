@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class App extends JFrame {
-
     // Criando componentes do form
     static JLabel EmaiLabel = new JLabel("Login");
     static JTextField C_Login = new JTextField(20); 
