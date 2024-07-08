@@ -1,45 +1,43 @@
-import java.awt.*;
 import javax.swing.*;
 
 public class App extends JFrame{
-    //criando os componentes do form
-    static JLabel lbl1 = new JLabel("Digite aqui:");
-    static JTextField txt1 = new JTextField(40);
-    static JButton btnok = new JButton("Ok");
-    static JLabel lbl2 = new JLabel("                                                                                                                        Sexo:");
-    static JLabel lbl3 = new JLabel("                                                                                                                        Opções:");
-    static JRadioButton rdbM = new JRadioButton("Masculino");
-    static JRadioButton rdbF = new JRadioButton("Feminino");
-    static ButtonGroup bg = new ButtonGroup();
-    static JCheckBox chk1 = new JCheckBox("Um");
-    static JCheckBox chk2 = new JCheckBox("Dois");
- 
-        public static void main (String[] args ) {
-            App Window = new App();
-            Window.setSize(600,200);
-            Window.setLocation(400,400);
+  //criando os componentes do form
+  static JLabel L_Name = new JLabel("Nome");
+  static JTextField B_Name = new JTextField(40);
+  static JLabel L_CPF = new JLabel("Nome");
+  static JTextField B_CPF = new JTextField(40);
+
+  static JLabel L_tamanho = new JLabel("Tamanho: ");
+  static JRadioButton R_P = new JRadioButton("Pequena");
+  static JRadioButton R_M = new JRadioButton("Média");
+  static JRadioButton R_G = new JRadioButton("Grande");
 
 
-            Window.setVisible(true);
-            Window.setTitle("Pizzaria Vai quem quer");
-            Window.setLayout(new FlowLayout());
-            //adicionando os componentes ao formulario window
-            Window.getContentPane().add(lbl1);
-            Window.getContentPane().add(txt1);
 
-            Window.getContentPane().add(btnok);
-            //static ButtonGroup bg = new ButtonGroup();
-            //adicionado ao grupo bg
-            bg.add(rdbM);
-            bg.add(rdbF);
-            Window.getContentPane().add(lbl2);
-            Window.add(rdbM);
-            Window.getContentPane().add(rdbF);
-            Window.getContentPane().add(lbl3);
-            Window.getContentPane().add(chk1);
-            Window.getContentPane().add(chk2);
-            //Window.pack();
-            //ação do botao
-            
+  public static void main (String[] args ) {
+    App Window = new App();
+    Window.setSize(600,200);
+    Window.setLocation(400,400);
+    Window.setVisible(true);
+    Window.setTitle("Pizzaria Vai quem quer");
+
+    //adicionando os componentes ao formulario window
+    Window.getContentPane().add(L_Name);
+    Window.getContentPane().add(B_Name);
+    Window.getContentPane().add(L_CPF);
+    Window.getContentPane().add(B_CPF);
+
+    Window.getContentPane().add(L_tamanho);
+    Window.getContentPane().add(R_P);
+    Window.getContentPane().add(R_M);
+    Window.getContentPane().add(R_G);
+
+    //static ButtonGroup bg = new ButtonGroup();
+
+    //adicionado ao grupo bg
+
+    //Window.pack();
+    //ação do botao
+
         }
     }
