@@ -133,8 +133,8 @@ public class App extends JFrame {
 
     Botao.setBackground(Color.green);
 
-    Botao.addActionListener( new ActionListener () {
-      public void actionPerformed (ActionEvent e) {
+    Botao.addActionListener(new ActionListener(){
+      public void actionPerformed(ActionEvent e){
         buttonComprar(e);
       }
     });
@@ -142,7 +142,13 @@ public class App extends JFrame {
   } //MEIN
 
   public static void buttonComprar(ActionEvent e) {
-    
+
+    String N = B_Name.getText();
+    String CPF = B_CPF.getText();
+    int M = Integer.parseInt(B_NMesa.getText());
+    float T = Float.parseFloat(B_Quant.getText())*2;
+
+    JOptionPane.showMessageDialog(null, "Nome : " +  N + "CPF : " + CPF + "Mesa : " + M + "Total " + T, "Incorreto" , JOptionPane.INFORMATION_MESSAGE);
       
   }
 }
