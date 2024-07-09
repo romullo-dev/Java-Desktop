@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class App extends JFrame {
@@ -123,10 +125,24 @@ public class App extends JFrame {
 
   public static void main(String[] args) {
     App Window = new App();
-    Window.setSize(600, 500);
+    Window.setSize(500, 400);
     Window.setLocation(400, 400);
     Window.setVisible(true);
     Window.setTitle("Pizzaria Vai quem quer");
     Window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    Botao.setBackground(Color.green);
+
+    Botao.addActionListener( new ActionListener () {
+      public void actionPerformed (ActionEvent e) {
+        buttonComprar(e);
+      }
+    });
+
+  } //MEIN
+
+  public static void buttonComprar(ActionEvent e) {
+    
+      
   }
 }
