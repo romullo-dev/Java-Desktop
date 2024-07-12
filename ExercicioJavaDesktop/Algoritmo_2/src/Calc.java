@@ -1,8 +1,8 @@
 public class Calc {
-  public static float Total (int I, float S_Bruto , float INSS, float FGTS, float IR, float D_F) {
-     float Total = S_Bruto - INSS - FGTS - IR + D_F;
+  public static float Total (int I, float S_Bruto , float INSS, float FGTS, float Valor_DF,float IR) {
+    float Total  =  S_Bruto  - (INSS + FGTS + IR + Valor_DF);
     if (I > 39) {
-      Total = Total + 500;
+      Total += 500;
     }
     return Total;
   }

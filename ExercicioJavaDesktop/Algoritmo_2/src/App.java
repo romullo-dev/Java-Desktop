@@ -45,8 +45,6 @@ public class App extends JFrame {
   static JLabel Liqui_Label = new JLabel ("Salário Liquido");
   static JLabel Liqui = new JLabel ();
 
-
-
   static JButton Botao = new JButton ("Calcular");
 
   public static void main (String [] args) {
@@ -119,19 +117,18 @@ public class App extends JFrame {
     int I = Integer.parseInt(Idade.getText());
 
     float Valor_INSS = Calc.INSS(S_Bruto);
-    INSS.setText("Resultado :" + Valor_INSS);
+    INSS.setText(String.format("R$ : %.2f ", Valor_INSS));
 
     float Valor_FGTS = Calc.FGTS(S_Bruto);
-    FGTS.setText("Resultado :" + Valor_FGTS);
+    FGTS.setText(String.format("R$ : %.2f ", Valor_FGTS));
 
     float Valor_IR = Calc.IR(S_Bruto);
-    IR.setText("Resultado :" + Valor_IR);
+    IR.setText(String.format("R$ : %.2f ", Valor_IR));
 
     float Valor_DF = Calc.D_F(S_Bruto);
-    D_F.setText("Resultado :" + Valor_DF);
+    D_F.setText(String.format("R$ : %.2f ", Valor_DF));
 
-    float Valor_Total = Calc.Total(I, S_Bruto, Valor_INSS, Valor_FGTS, Valor_IR, S_Bruto);
-
-    Liqui.setText("Resultado :" + Valor_Total);
+    float Valor_Total = Calc.Total(I, S_Bruto, Valor_INSS, Valor_FGTS, Valor_DF, Valor_IR);
+    Liqui.setText(String.format("R$ : %.2f ", Valor_Total));
   }
 }
