@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class App extends JFrame {
@@ -114,5 +116,24 @@ public class App extends JFrame {
         Window.add(buttonPanel, BorderLayout.SOUTH);
 
         Window.setVisible(true);
+
+        Button_Calc.addActionListener(new ActionListener (){
+          public void  actionPerformed (ActionEvent e) {
+            Button_action (e);
+          }
+        }
+
+        );
+
+    }
+
+    public static void Button_action (ActionEvent e) {
+      float Note_1 = Float.parseFloat(N1.getText());
+      float Note_2 = Float.parseFloat(N2.getText());
+      float Note_3 = Float.parseFloat(N3.getText());
+      int F = Integer.parseInt(lack.getText());
+
+      Calc.Calculo(Note_1, Note_2, Note_3, F, button_One, button_Two, button_Three);
+
     }
 }
