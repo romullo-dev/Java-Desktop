@@ -115,6 +115,8 @@ public class App extends JFrame {
         Window.add(mainPanel, BorderLayout.CENTER);
         Window.add(buttonPanel, BorderLayout.SOUTH);
 
+        Button_Calc.setBackground(Color.GREEN);
+
         Window.setVisible(true);
 
         Button_Calc.addActionListener(new ActionListener (){
